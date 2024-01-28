@@ -5,7 +5,9 @@ str(randList)
 jogo = []
 lista = []
 
-for x in range(10):
+input = int(input("Quantos jogos? "))
+
+for x in range(input):
     for y in range (6):
         lista.append(randint(0, 60))
     jogo.append(lista[:])
@@ -14,7 +16,7 @@ for x in range(10):
 
 
 arquivo = open(f"jogos{randList}.txt", "w")
-for l in jogo:
-    arquivo.write(str(l) + "\n")
+for l in range (len(jogo)):
+    arquivo.write(str(jogo[l]) + "\n")
     
 arquivo.close()
